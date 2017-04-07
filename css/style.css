@@ -1,0 +1,504 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+img {
+    border: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+input, select, button {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+body {
+    width: 100%;
+    *cursor: default;
+    overflow: hidden;
+    font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;
+}
+
+#pageContain {
+    overflow: hidden;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contain {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    z-index: 0;
+}
+
+.current .contain, .slide .contain {
+    display: block;
+}
+
+.current {
+    display: block;
+    z-index: 1;
+}
+
+.slide {
+    display: block;
+    z-index: 2;
+}
+
+.swipe {
+    display: block;
+    z-index: 3;
+    transition-duration: 0ms !important;
+    -webkit-transition-duration: 0ms !important;
+}
+
+.page1 {
+    background: #1f2228;
+    text-align: center;
+}
+
+.page2 {
+    background: #ffffff;
+}
+
+.page3 {
+    background: #24314b;
+}
+
+.page4 {
+    background: #ffffff;
+}
+
+.page5 {
+    background: #184351;
+}
+
+.page6 {
+    background: #ffffff;
+}
+
+.page7 {
+    background: #1f2228;
+}
+
+#navBar {
+    z-index: 3;
+    position: absolute;
+    top: 40%;
+    right: 3%;
+}
+
+#navBar .active {
+    background: #34baff;
+}
+
+#navBar li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 1px solid #34baff;
+    transition: all .7s ease;
+    border-radius: 50%;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+}
+
+/*page1样式*/
+.txt {
+    margin-top: 20%;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.page1 div {
+    width: 100%;
+    float: left;
+}
+
+.page1 .one {
+    margin-top: 50px;
+    transition: all 0.5s ease;
+}
+
+.page1 .one.current img {
+    transform: translate(20px, 30px);
+}
+
+.page1 div p {
+    font-size: 18px;
+    color: #a4acc5;
+    padding-top: 115px;
+    padding-bottom: 5px;
+}
+
+.page .title {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.page .title h2 {
+    font-size: 29px;
+    color: #888;
+    font-family: Century Gothic, arial;
+}
+
+.page .title h3 {
+    font-size: 16px;
+    color: #e61163;
+    font-family: Century Gothic, arial;
+}
+
+.page .title p {
+    font-size: 14px;
+    color: #666;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+/*page2样式*/
+.page2 .about {
+    width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.page2 .about ul li {
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+
+.page2 .about ul li img {
+    transition: all 0.5s ease;
+}
+
+.page2 .about ul li img:hover {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+
+.page2 .about ul li h4 {
+    font-size: 16px;
+    color: #666;
+    height: 40px;
+    line-height: 40px;
+}
+
+.page2 .about ul li p {
+    font-size: 13px;
+    color: #666;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.page2 .about ul li p a {
+    color: #ff5c5c;
+}
+
+/*page3样式*/
+.page3 .title h2, .page3 .title h3, .page3 .title p, .page5 .title h2, .page5 .title h3,
+.page7 .title h2, .page7 .title h3, .page7 .title p {
+    color: #a4acc5;
+}
+
+.page3 .skill {
+    width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 330px;
+    background: url(../images/skill_bg.png) no-repeat bottom;
+}
+
+.page3 .skill ul {
+    margin: 10px 50px;
+    width: 880px;
+    float: left;
+}
+
+.page3 .skill ul li {
+    width: 88px;
+    text-align: center;
+    height: 88px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #a4acc5;
+    float: left;
+    margin-right: 40px;
+}
+
+.page3 .skill ul li:last-child {
+    margin-right: 0;
+}
+
+.page3 .skill ul li:hover {
+    border: 1px solid #1f93ff;
+}
+
+.page3 .skill ul li:hover h3, .page3 .skill ul li:hover h4 {
+    color: #1f93ff;
+    transform: translate(0px, -15px);
+    -moz-transform: translate(0px, -15px);
+    -webkit-transform: translate(0px, -15px);
+}
+
+.page3 .skill ul li h3 {
+    font-family: arial;
+    font-size: 30px;
+    color: #a4acc5;
+    height: 60px;
+    line-height: 70px;
+    transition: all 0.5s ease;
+}
+
+.page3 .skill ul li h4 {
+    font-size: 13px;
+    color: #a4acc5;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+/*page4样式*/
+.page4 .experience {
+    width: 1000px;
+    height: 320px;
+    margin: 50px auto;
+    text-align: center;
+    background: url(../images/arrow.png) no-repeat center 60px;
+}
+
+.page4 .experience ul li {
+    float: left;
+    width: 18%;
+    margin-left: 49px;
+}
+
+.page4 .experience ul li:first-child {
+    width: 17%;
+    margin-left: 90px;
+}
+
+.page4 .experience ul li:nth-child(2) {
+    margin-left: 30px;
+}
+
+.page4 .experience ul li:nth-child(2) h2 {
+    background: #2dbcff;
+}
+
+.page4 .experience ul li:nth-child(3) {
+    margin-left: 38px;
+}
+
+.page4 .experience ul li:nth-child(3) h2 {
+    background: #97c63f;
+}
+
+.page4 .experience ul li:nth-child(4) {
+    margin-left: 34px;
+}
+
+.page4 .experience ul li:nth-child(4) h2 {
+    background: #ffbb42;
+}
+
+.page4 .experience ul li h3 {
+    font-size: 15px;
+    color: #666;
+}
+
+.page4 .experience ul li h2 {
+    font-size: 16px;
+    background: #f1752b;
+    width: 160px;
+    color: #fff;
+    display: block;
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin: 10px auto;
+}
+
+.page4 .experience ul li h4 {
+    font-size: 14px;
+    color: #444;
+    margin-top: 45px;
+}
+
+.page4 .experience ul li p {
+    font-size: 12px;
+    color: #666;
+    margin-left: 5px;
+    line-height: 1.8;
+    text-align: left;
+    width: 90%;
+}
+
+/*page5样式*/
+.page5 .works {
+    width: 1000px;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+.page5 .works ul li {
+    float: left;
+    width: 308px;
+    height: 387px;
+    margin-left: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page5 .works ul li p {
+    bottom: -40px;
+    height: 40px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    background: #000;
+    font-size: 14px;
+    opacity: 0.85;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.page5 .works ul li:hover p {
+    bottom: 0px;
+}
+
+.page5 .works ul li img {
+    transform: scale(1);
+    transition: all 0.8s ease;
+}
+
+.page5 .works ul li img:hover {
+    transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+/*page6样式*/
+.page6 .title {
+    margin-top: 20px;
+}
+
+.page6 .works {
+    width: 1000px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.page6 .works dl dd {
+    float: left;
+    width: 232px;
+    height: 222px;
+    margin: 15px 0 0px 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page6 .works dl dd p {
+    bottom: -40px;
+    font-size: 14px;
+    height: 40px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    background: #000;
+    opacity: 0.85;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.page6 .works dl dd:hover p {
+    bottom: 0px;
+}
+
+.page6 .works dl dd img {
+    transform: scale(1);
+    transition: all 0.8s ease;
+}
+
+.page6 .works dl dd img:hover {
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+
+/*page7样式*/
+.page7 .title p {
+    color: #ff0062;
+}
+
+.page7 .contact {
+    width: 1000px;
+    margin: 20px auto;
+    padding-left: 30px;
+    overflow: hidden;
+    height: 380px;
+    background: url(../images/bottom_bg.png) no-repeat 600px;
+    transition: all 0.5s ease;
+}
+
+.page7 .contact.current:hover {
+    background: url(../images/bottom_bg.png) no-repeat 400px;
+}
+
+.page7 .contact h2 {
+    font-size: 22px;
+    color: #a4acc5;
+    height: 40px;
+    font-family: 方正细黑一简体;
+    line-height: 40px;
+    margin-left: 50px;
+}
+
+.page7 .contact h2:first-child {
+    margin-top: 50px;
+}
+
+.page7 .contact p {
+    color: #a4acc5;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 50px;
+    font-family: arial;
+    display: block;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
